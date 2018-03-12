@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<ACM name = "新疆哈密机场集中监控系统">
+	<station name = "航向台">
+		<system name = "ILS">
+			<equipment name = "航向Nomac7013B" type = "Nomac7013B" />
+		</system>
+		<system name = "POE">
+			<equipment name = "空调1" type = "AC485T" location = "0-0-2-2"/>
+			<equipment name = "空调2" type = "AC485T" location = "0-2-2-2"/>
+		</system>
+	</station>
+	<station name = "下滑台">
+		<system name = "ILS">
+			<equipment name = "下滑Nomac7013B" type = "Nomac7013B"/>
+		</system>
+		<system name = "POE">
+			<equipment name = "空调3" type = "AC485T" location = "0-0-2-2"/>
+			<equipment name = "空调4" type = "AC485T" location = "0-2-2-2"/>
+			<equipment name = "山特UPS" type = "UPS" location = "2-0-6-4"/>
+		</system>
+	</station>
+</ACM>

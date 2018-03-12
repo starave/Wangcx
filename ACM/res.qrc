@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>button/addBtn.png</file>
+        <file>button/decBtn.png</file>
+        <file>button/tri_down.png</file>
+        <file>button/tri_up.png</file>
+        <file>background/namespace.jpg</file>
+    </qresource>
+    <qresource prefix="/config">
+        <file>xml/ACM.xml</file>
+    </qresource>
+</RCC>
