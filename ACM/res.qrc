@@ -8,5 +8,6 @@
     </qresource>
     <qresource prefix="/config">
         <file>xml/ACM.xml</file>
+        <file>xml/Equiemnt.xml</file>
     </qresource>
 </RCC>

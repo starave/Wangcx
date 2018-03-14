@@ -8,11 +8,11 @@
 #include <QMessageBox>
 #include <QDomDocument>
 
-struct PROJECT_CONFIG
+struct EQUIP_CFG
 {
-    PROJECT_CONFIG() {}
+    EQUIP_CFG() {}
     QString station;        //站点名称
-    QString system;         //系统名称（ILS 仪表着陆系统 POW 动力系统 EVR 环境系统）
+    QString system;         //系统名称（ILS 仪表着陆系统 POE 动力环境系统）
     QString equipment;      //设备名称
     QString type;           //设备类型
     QString location;       //界面位置
@@ -46,7 +46,19 @@ public:
      * @brief getProjectConfig  获取工程配置
      * @return
      */
-    QList<PROJECT_CONFIG> getProjectConfig() const;
+    QList<EQUIP_CFG> getProjectConfig() const;
+
+    /**
+     * @brief getIns        获取单一实例
+     * @return
+     */
+    static ProjectConfig *getIns();
+
+    /**
+     * @brief getStationList    获取台站名列表
+     * @return
+     */
+    QStringList getStationList() const;
 
 signals:
 
@@ -56,7 +68,11 @@ private:
     QString fileName;               //文件名
 
     QString projectName;            //工程名称
-    QList<PROJECT_CONFIG> projectConfig;   //工程配置
+    QList<EQUIP_CFG> projectConfig;   //工程配置
+    QMap<QString, EQUIP_CFG> proCfg;
+    QStringList stationList;        //台站名列表
+
+    static ProjectConfig* ins; //单一实例
 };
 
 #endif // PROJECTCONFIG_H

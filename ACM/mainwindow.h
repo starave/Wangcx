@@ -15,6 +15,7 @@
 #include "limitmanagedialog.h"
 #include "monitorareaform.h"
 #include "projectconfig.h"
+#include "equipmentconfig.h"
 
 #include "airconditioner.h"
 #include "nomac7013b.h"
@@ -74,8 +75,9 @@ private:
     LimitManageDialog *limitManage;             //阈值管理
 
     MonitorAreaForm *VHFStation;
-    QList<PROJECT_CONFIG> projectConfig;        //工程配置
+    QList<EQUIP_CFG> projectConfig;        //工程配置
     QString projectName;                        //工程名称
+    QMap<QString, EQUIP_PARAM> equipConfig;            //设备配置
 
     QMap<QString, MonitorAreaForm *> mapStaionWidget;    //站点名--站点窗口
     QStringList stationNameList;                //站点名称列表

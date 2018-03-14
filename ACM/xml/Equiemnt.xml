@@ -1,0 +1,72 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Equipments>
+	<Equipment name = "Nomac7013B">
+		<Param name = "mon1_CL_DDM" type = "analog" />
+		<Param name = "mon1_CL_SDM" type = "analog" />
+		<Param name = "mon1_CL_RF" type = "analog" />
+		<Param name = "mon1_DS_DDM" type = "analog" />
+		<Param name = "mon1_DS_SDM" type = "analog" />
+		<Param name = "mon1_DS_RF" type = "analog" />
+		<Param name = "mon1_NF_DDM" type = "analog" />
+		<Param name = "mon1_NF_SDM" type = "analog" />
+		<Param name = "mon1_NF_RF" type = "analog" />
+		<Param name = "mon1_CLR_DDM" type = "analog" />
+		<Param name = "mon1_CLR_SDM" type = "analog" />
+		<Param name = "mon1_CLR_RF" type = "analog" />
+		<Param name = "mon1_DIFF_FREQ" type = "analog" />
+		<Param name = "mon1_TEST_DDM" type = "analog" />
+		<Param name = "mon1_TEST_SDM" type = "analog" />
+		<Param name = "mon1_TEST_RF" type = "analog" />
+		<Param name = "mon1_CL_ID_MOD" type = "analog" />
+		<Param name = "mon1_CL_ID_ACT" type = "analog" />
+		<Param name = "mon1_CLR_ID_MOD" type = "analog" />
+		<Param name = "mon1_CLR_ID_ACT" type = "analog" />
+		<Param name = "mon1_DL_0" type = "analog" />
+		<Param name = "mon1_DL_1" type = "analog" />
+		<Param name = "mon1_DL_2" type = "analog" />
+		<Param name = "mon1_DL_3" type = "analog" />
+		
+		<Param name = "mon2_CL_DDM" type = "analog" />
+		<Param name = "mon2_CL_SDM" type = "analog" />
+		<Param name = "mon2_CL_RF" type = "analog" />
+		<Param name = "mon2_DS_DDM" type = "analog" />
+		<Param name = "mon2_DS_SDM" type = "analog" />
+		<Param name = "mon2_DS_RF" type = "analog" />
+		<Param name = "mon2_NF_DDM" type = "analog" />
+		<Param name = "mon2_NF_SDM" type = "analog" />
+		<Param name = "mon2_NF_RF" type = "analog" />
+		<Param name = "mon2_CLR_DDM" type = "analog" />
+		<Param name = "mon2_CLR_SDM" type = "analog" />
+		<Param name = "mon2_CLR_RF" type = "analog" />
+		<Param name = "mon2_DIFF_FREQ" type = "analog" />
+		<Param name = "mon2_TEST_DDM" type = "analog" />
+		<Param name = "mon2_TEST_SDM" type = "analog" />
+		<Param name = "mon2_TEST_RF" type = "analog" />
+		<Param name = "mon2_CL_ID_MOD" type = "analog" />
+		<Param name = "mon2_CL_ID_ACT" type = "analog" />
+		<Param name = "mon2_CLR_ID_MOD" type = "analog" />
+		<Param name = "mon2_CLR_ID_ACT" type = "analog" />
+		<Param name = "mon2_DL_0" type = "analog" />
+		<Param name = "mon2_DL_1" type = "analog" />
+		<Param name = "mon2_DL_2" type = "analog" />
+		<Param name = "mon2_DL_3" type = "analog" />
+		
+		<Param name = "alarm"  type = "digital" />
+		<Param name = "service" type = "digital" />
+		<Param name = "stby" type = "digital" />
+		<Param name = "maint" type = "digital" />
+		<Param name = "ident" type = "digital" />
+		<Param name = "batt" type = "digital" />
+		<Param name = "disagr" type = "digital" />
+		<Param name = "intgrt" type = "digital" />
+		
+		<Param name = "nomal"  type = "digital" />
+		<Param name = "warm"  type = "digital" />
+		<Param name = "tx1cou"  type = "digital" />
+		<Param name = "tx2cou"  type = "digital" />
+		<Param name = "tx1clr"  type = "digital" />
+		<Param name = "tx2clr"  type = "digital" />
+		<Param name = "txtoair"  type = "digital" />
+		<Param name = "maintx1tx2"  type = "digital" />		
+	</Equipment>
+</Equipments>

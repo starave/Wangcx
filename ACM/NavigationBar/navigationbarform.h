@@ -27,7 +27,7 @@ private slots:
 
     void on_pb_limit_clicked();
 
-    void on_pb_station_clicked();
+    void onStationClicked();
 
 private:
     Ui::NavigationBarForm *ui;

@@ -17,7 +17,7 @@ void NavigationBarForm::addStation(QString stationName)
 {
     QPushButton *button = new QPushButton(stationName,this);
     ui->verticalLayout->addWidget(button);
-    connect(button, SIGNAL(clicked()), this, SLOT(on_pb_station_clicked()));
+    connect(button, SIGNAL(clicked()), this, SLOT(onStationClicked()));
 }
 
 void NavigationBarForm::on_pb_quit_clicked()
@@ -35,7 +35,7 @@ void NavigationBarForm::on_pb_limit_clicked()
     emit UiNavigation("LimitManage");
 }
 
-void NavigationBarForm::on_pb_station_clicked()
+void NavigationBarForm::onStationClicked()
 {
     QPushButton *button = (QPushButton*)sender();
     emit UiNavigation(button->text());

@@ -1,5 +1,7 @@
 #include "projectconfig.h"
 
+ProjectConfig* ProjectConfig::ins = nullptr;
+
 ProjectConfig::ProjectConfig(QObject *parent):QObject(parent)
 {
 
@@ -48,6 +50,7 @@ void ProjectConfig::phraseXml()
     for(int i = 0; i < stationNodeList.count(); i++)
     {
         QDomElement stationElement = stationNodeList.item(i).toElement();
+        stationList.append(stationElement.attribute("name"));
         const QDomNodeList systemNodeList = stationElement.childNodes();
         for(int j = 0; j < systemNodeList.count(); j++)
         {
@@ -55,7 +58,7 @@ void ProjectConfig::phraseXml()
             const QDomNodeList equipmentNodeList = systemElement.childNodes();
             for(int k = 0; k < equipmentNodeList.count(); k++)
             {
-                PROJECT_CONFIG config;
+                EQUIP_CFG config;
                 QDomElement equipmentElement = equipmentNodeList.item(k).toElement();
                 config.station = stationElement.attribute("name");
                 config.system = systemElement.attribute("name");
@@ -79,9 +82,23 @@ QString ProjectConfig::getProjectName() const
     return projectName;
 }
 
-QList<PROJECT_CONFIG> ProjectConfig::getProjectConfig() const
+QList<EQUIP_CFG> ProjectConfig::getProjectConfig() const
 {
     return projectConfig;
+}
+
+ProjectConfig *ProjectConfig::getIns()
+{
+    if(!ins)
+    {
+        ins = new ProjectConfig(":/config/xml/ACM.xml");
+    }
+    return ins;
+}
+
+QStringList ProjectConfig::getStationList() const
+{
+    return stationList;
 }
 
 

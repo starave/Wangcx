@@ -23,7 +23,7 @@ void MainWindow::initUi()
     workSpace = new QWidget(this);
     nameArea = new NameArea(this);
     nameArea->setProjectName(projectName);
-    nameArea->setStyleSheet("border-image:url(:/image/background/namespace.jpg);");
+    nameArea->setStyleSheet("background-image:url(:/image/background/namespace.jpg);");
     monitorSpace = new QWidget(this);
     alarmSpace = new QWidget(this);
     alarmSpace->setStyleSheet("background-color:blue;");
@@ -66,22 +66,21 @@ void MainWindow::initUi()
 
 void MainWindow::readConfig()
 {
-    ProjectConfig config(":/config/xml/ACM.xml");
-    projectName = config.getProjectName();
-    projectConfig = config.getProjectConfig();
+    projectName = ProjectConfig::getIns()->getProjectName();
+    projectConfig = ProjectConfig::getIns()->getProjectConfig();
+    stationNameList = ProjectConfig::getIns()->getStationList();
+
+    equipConfig = EquipmentConfig::getIns()->getMapEquParam();
 }
 
 void MainWindow::configUi()
 {
     /************配置导航栏*************/
-    for(int i = 0; i < projectConfig.count(); i++)
+    for(int i = 0; i < stationNameList.count(); i++)
     {
-        if(!stationNameList.contains(projectConfig.at(i).station))
-        {
-            navigationBar->addStation(projectConfig.at(i).station);
-            stationNameList.append(projectConfig.at(i).station);
-        }
+        navigationBar->addStation(stationNameList.at(i));
     }
+
     /***********配置站点界面**************/
     for(int i = 0; i < stationNameList.count(); i++)
     {
@@ -90,6 +89,7 @@ void MainWindow::configUi()
         mapStaionWidget.insert(stationNameList.at(i), widget);
     }
     dataArea->setCurrentWidget(mapStaionWidget.value(stationNameList.at(0)));
+
     /***********配置设备界面**************/
     for(int i = 0; i < projectConfig.count(); i++)
     {
